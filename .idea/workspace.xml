@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -45,27 +45,28 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/vasiaplaton/projects/TaskTracker/src/main/java/platon/ru/vsu/cs/lib",
+    "last_opened_file_path": "/Users/vasiaplaton/projects/TaskTracker/src/main/java/platon/ru/vsu/cs/alib",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/platon/ru/vsu/cs/lib" />
+      <recent name="$PROJECT_DIR$/src/main/java/platon/ru/vsu/cs/alib" />
       <recent name="$PROJECT_DIR$/src/main/java/platon/ru/vsu/cs" />
+      <recent name="$PROJECT_DIR$/src/main/java/platon/ru/vsu/cs/lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="platon.ru.vsu.cs.database.sql" />
       <recent name="platon.ru.vsu.cs.alib.memory" />
       <recent name="platon.ru.vsu.cs.lib" />
       <recent name="platon.ru.vsu.cs.database.memory.repositories" />
       <recent name="platon.ru.vsu.cs.database.repostiories" />
-      <recent name="platon.ru.vsu.cs.database.annotations" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.platon.ru.vsu.cs.console.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="platon.ru.vsu.cs.Main" />
       <module name="TaskTracker.main" />
@@ -118,6 +119,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="platon.ru.vsu.cs.generator.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="platon.ru.vsu.cs.generator.Main" />
+      <module name="TaskTracker.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="platon.ru.vsu.cs.generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="platon.ru.vsu.cs.web.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="platon.ru.vsu.cs.web.Main" />
       <module name="TaskTracker.main" />
@@ -134,12 +148,14 @@
     <list>
       <item itemvalue="Application.Main1" />
       <item itemvalue="Application.platon.ru.vsu.cs.console.Main" />
+      <item itemvalue="Application.platon.ru.vsu.cs.generator.Main" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.platon.ru.vsu.cs.web.Main" />
       <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.platon.ru.vsu.cs.generator.Main" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.platon.ru.vsu.cs.web.Main" />
         <item itemvalue="Application.Main" />
@@ -216,5 +232,26 @@
     <MESSAGE value="added filters" />
     <MESSAGE value="sql work in progress" />
     <option name="LAST_COMMIT_MESSAGE" value="sql work in progress" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/platon/ru/vsu/cs/alib/memory/MemoryRepository.java</url>
+          <line>158</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/platon/ru/vsu/cs/alib/memory/MemoryRepository.java</url>
+          <line>159</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/platon/ru/vsu/cs/alib/memory/MemoryRepository.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

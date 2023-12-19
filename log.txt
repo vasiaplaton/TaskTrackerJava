@@ -1,5 +1,407 @@
-[2023-12-14 22:11:15] url: jdbc:postgresql://localhost:5432/tasks?user=admin&password=admin
-[2023-12-14 22:11:15] INSERT INTO Students (id, groupId, firstName, lastName ) VALUES (1, '5', 'Alice', 'Smith' );
-[2023-12-14 22:11:15] org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "students_pkey"
-  Detail: Key (id)=(1) already exists.
-[2023-12-14 22:11:41] INSERT INTO Students (id, groupId, firstName, lastName ) VALUES (990, '5', 'AliceeeHello', 'SmithFromPostman' );
+[2023-12-20 02:28:45] url: jdbc:postgresql://localhost:5432/tasks?user=admin&password=admin
+[2023-12-20 02:28:46] SELECT id, num FROM Groups
+[2023-12-20 02:28:46] SELECT id, num FROM Groups
+[2023-12-20 02:28:46] Got 7 for class: platon.ru.vsu.cs.database.models.Group
+[2023-12-20 02:28:46] Got 8 for class: platon.ru.vsu.cs.database.models.Group
+[2023-12-20 02:28:46] Got 9 for class: platon.ru.vsu.cs.database.models.Group
+[2023-12-20 02:28:46] Got 10 for class: platon.ru.vsu.cs.database.models.Group
+[2023-12-20 02:28:46] Got 11 for class: platon.ru.vsu.cs.database.models.Group
+[2023-12-20 02:28:46] Got 12 for class: platon.ru.vsu.cs.database.models.Group
+[2023-12-20 02:28:46] Got 113134 for class: platon.ru.vsu.cs.database.models.Group
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 1
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 1
+[2023-12-20 02:28:46] Got Alice for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Brown for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Charlie for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Davis for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Eve for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Smith for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Eve for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Wilson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 3
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 3
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 14
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 14
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 14 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 14 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 14 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 21
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 21
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 21 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 25
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 25
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 25 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 25 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 2
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 2
+[2023-12-20 02:28:46] Got Alice for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Davis for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Bob for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Johnson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Bob for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Wilson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Eve for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Johnson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 4
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 4
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 7
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 7
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 7 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 7 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 10
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 10
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 10 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 10 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 22 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 3
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 3
+[2023-12-20 02:28:46] Got Alice for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Johnson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Charlie for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Johnson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got David for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Johnson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got David for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Brown for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got David for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Davis for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got David for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Wilson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 2
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 2
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 12
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 12
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 12 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 17
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 17
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 18
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 18
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 18 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 18 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 19
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 19
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 19 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 20
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 20
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 20 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 4
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 4
+[2023-12-20 02:28:46] Got Charlie for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Wilson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 4 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 15
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 15
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 5
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 5
+[2023-12-20 02:28:46] Got Alice for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Smith for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Bob for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Smith for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Bob for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Brown for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Bob for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Davis for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Charlie for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Smith for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Charlie for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Brown for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got David for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Smith for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Eve for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Brown for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got AliceeeHello for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got SmithFromPostman for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 1
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 1
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 6
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 6
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 8
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 8
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 8 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 9
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 9
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 9 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 9 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 9 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 11
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 11
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 11 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 13
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 13
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 13 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 13 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 13 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 16
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 16
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 16 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 23
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 23
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 23 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 990
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 990
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 6
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 6
+[2023-12-20 02:28:46] Got Alice for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Wilson for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 6 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Eve for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got Davis for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] Got 6 for class: platon.ru.vsu.cs.database.models.Student
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 5
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 5
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 5 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 24
+[2023-12-20 02:28:46] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 24
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 24 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 24 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 3 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 1 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 24 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] Got 2 for class: platon.ru.vsu.cs.database.models.Mark
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 3
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 7
+[2023-12-20 02:28:46] SELECT id, firstName, lastName, groupId FROM Students WHERE groupId = 7
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks
+[2023-12-20 02:28:46] SELECT id, name, description FROM Tasks
+[2023-12-20 02:28:46] Got ONE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got TWO for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got THREE for class: platon.ru.vsu.cs.database.models.Task
+[2023-12-20 02:28:46] Got Great description for class: platon.ru.vsu.cs.database.models.Task
