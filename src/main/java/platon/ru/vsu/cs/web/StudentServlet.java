@@ -3,9 +3,9 @@ package platon.ru.vsu.cs.web;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import platon.ru.vsu.cs.database.Database;
+//import platon.ru.vsu.cs.database.Database;
 import platon.ru.vsu.cs.database.models.Student;
-import platon.ru.vsu.cs.database.sql.DatabaseSQL;
+//import platon.ru.vsu.cs.database.sql.DatabaseSQL;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,7 +21,7 @@ import java.util.Arrays;
 @WebServlet(name = "students", urlPatterns = {"/students/*"} )
 public class StudentServlet extends HttpServlet {
     private final ObjectWriter objectWriter = new ObjectMapper().writerWithDefaultPrettyPrinter();
-    private final Database db = DatabaseSQL.getInstance();
+   // private final Database db = DatabaseSQL.getInstance();
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Получаем параметр "id" из URL
         String[] params = request.getPathInfo().split("/");
@@ -44,18 +44,18 @@ public class StudentServlet extends HttpServlet {
 
         Object value;
         if( id != null) {
-            value = db.getStudent(id);
+          //  value = db.getStudent(id);
         }
         else {
-            value = db.getStudents();
+          //  value = db.getStudents();
         }
 
-        if(value == null){
-            response.sendError(HttpServletResponse.SC_NOT_FOUND);
-            return;
-        }
+       // if(value == null){
+       //     response.sendError(HttpServletResponse.SC_NOT_FOUND);
+       //     return;
+      //  }
         PrintWriter out = response.getWriter();
-        objectWriter.writeValue(out, value);
+       // objectWriter.writeValue(out, value);
         out.flush();
     }
 
@@ -88,10 +88,10 @@ public class StudentServlet extends HttpServlet {
             return;
         }
         try {
-            Student s1 = db.addStudent(s);
-            PrintWriter out = response.getWriter();
-            objectWriter.writeValue(out, s1);
-            out.flush();
+          //  Student s1 = db.addStudent(s);
+          //  PrintWriter out = response.getWriter();
+         //   objectWriter.writeValue(out, s1);
+         //   out.flush();
         }
         catch (RuntimeException e){
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);

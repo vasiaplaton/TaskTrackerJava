@@ -2,26 +2,20 @@ package platon.ru.vsu.cs.database.models;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import platon.ru.vsu.cs.database.annotations.Entity;
+import platon.ru.vsu.cs.database.annotations.*;
+import platon.ru.vsu.cs.alib.annotations.Column;
+import platon.ru.vsu.cs.alib.annotations.Entity;
+import platon.ru.vsu.cs.alib.annotations.PrimaryKey;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Group extends BaseModel {
-    protected int num;
+@Entity(tableName = "Groups")
+public class Group {
+    @PrimaryKey
+    protected Integer id;
 
-    @Override
-    public String[] getColumnNames() {
-        return new String[]{"num"};
-    }
+    @Column(columnName = "num", nullable = false)
+    protected Integer num;
 
-    @Override
-    public String[] getColumnValues() {
-        return new String[]{Integer.toString(num)};
-    }
-
-    @Override
-    public void setColumnValues(String[] columnValues) {
-        num = Integer.parseInt(columnValues[0]);
-    }
 }

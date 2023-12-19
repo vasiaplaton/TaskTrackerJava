@@ -1,11 +1,10 @@
-package platon.ru.vsu.cs.database;
+package platon.ru.vsu.cs.alib;
 
-import platon.ru.vsu.cs.database.models.BaseModel;
 import platon.ru.vsu.cs.database.sql.table.Filter;
 
 import java.util.List;
 
-public interface Table<T extends BaseModel> {
+public interface Repository<T> {
     List<T> getAll();
 
     List<T> getAll(Filter[] filters);
@@ -14,6 +13,6 @@ public interface Table<T extends BaseModel> {
 
     T add(T object);
 
-    void remove(int id);
+    void delete(int id);
     void update(int id, T newer);
 }

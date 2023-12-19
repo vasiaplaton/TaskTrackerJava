@@ -3,31 +3,28 @@ package platon.ru.vsu.cs.database.models;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.Objects;
+import platon.ru.vsu.cs.alib.annotations.Column;
+import platon.ru.vsu.cs.alib.annotations.Entity;
+import platon.ru.vsu.cs.alib.annotations.ForeignKey;
+import platon.ru.vsu.cs.alib.annotations.PrimaryKey;
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Mark extends BaseModel {
+@Entity(tableName = "Marks")
+public class Mark {
+    @PrimaryKey
+    protected Integer id;
+
+    @Column(columnName = "isDone", nullable = false)
     protected boolean isDone;
+
+    @Column(columnName = "studentId", nullable = false)
+    @ForeignKey(table = Student.class, column = "id")
     protected int studentId;
+
+    @Column(columnName = "taskId", nullable = false)
+    @ForeignKey(table = Student.class, column = "id")
     protected int taskId;
 
-    @Override
-    public String[] getColumnNames() {
-        return new String[] {"isDone", "studentId", "taskId"};
-    }
-
-    @Override
-    public String[] getColumnValues() {
-        return new String[] {isDone ? "1": "0", String.valueOf(studentId), String.valueOf(taskId)};
-    }
-
-    @Override
-    public void setColumnValues(String[] columnValues) {
-        isDone = !Objects.equals(columnValues[0], "0");
-        studentId = Integer.parseInt(columnValues[1]);
-        taskId = Integer.parseInt(columnValues[2]);
-    }
 }

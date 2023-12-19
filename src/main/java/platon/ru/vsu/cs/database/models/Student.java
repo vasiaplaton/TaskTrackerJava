@@ -3,31 +3,27 @@ package platon.ru.vsu.cs.database.models;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import platon.ru.vsu.cs.alib.annotations.Column;
+import platon.ru.vsu.cs.alib.annotations.Entity;
+import platon.ru.vsu.cs.alib.annotations.ForeignKey;
+import platon.ru.vsu.cs.alib.annotations.PrimaryKey;
 
 
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Student extends BaseModel {
-    protected Integer groupId;
+@Entity(tableName = "Students")
+public class Student {
+    @PrimaryKey
+    protected Integer id;
+
+    @Column(columnName = "firstName", nullable = false)
     protected String firstName;
+
+    @Column(columnName = "lastName", nullable = false)
     protected String lastName;
 
-    @Override
-    public String[] getColumnNames() {
-        return new String[] {"groupId", "firstName", "lastName"};
-    }
-
-    @Override
-    public String[] getColumnValues() {
-        return new String[] {String.valueOf(groupId), firstName, lastName};
-    }
-
-    @Override
-    public void setColumnValues(String[] columnValues) {
-        groupId = Integer.parseInt(columnValues[0]);
-        firstName = columnValues[1];
-        lastName = columnValues[2];
-        // TODO: update method
-    }
+    @Column(columnName = "groupId", nullable = false)
+    @ForeignKey(table = Student.class, column = "id")
+    protected Integer groupId;
 }

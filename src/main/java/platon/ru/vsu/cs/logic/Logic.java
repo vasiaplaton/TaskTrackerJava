@@ -1,14 +1,12 @@
 package platon.ru.vsu.cs.logic;
 
-import platon.ru.vsu.cs.database.Database;
 import platon.ru.vsu.cs.database.models.Mark;
 import platon.ru.vsu.cs.database.models.Student;
-import platon.ru.vsu.cs.database.sql.DatabaseSQL;
 import platon.ru.vsu.cs.database.sql.table.Filter;
 
 import java.util.List;
 
-public class Logic {
+public class Logic {/*
     protected final Database db;
     private Logic(){
         this.db = DatabaseSQL.getInstance();
@@ -52,5 +50,5 @@ public class Logic {
             }
             db.removeMark(mark.getId());
         }
-    }
+    }*/
 }
