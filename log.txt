@@ -1,0 +1,5 @@
+[2023-12-14 22:11:15] url: jdbc:postgresql://localhost:5432/tasks?user=admin&password=admin
+[2023-12-14 22:11:15] INSERT INTO Students (id, groupId, firstName, lastName ) VALUES (1, '5', 'Alice', 'Smith' );
+[2023-12-14 22:11:15] org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "students_pkey"
+  Detail: Key (id)=(1) already exists.
+[2023-12-14 22:11:41] INSERT INTO Students (id, groupId, firstName, lastName ) VALUES (990, '5', 'AliceeeHello', 'SmithFromPostman' );
