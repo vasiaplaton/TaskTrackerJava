@@ -49,7 +49,7 @@ public class PrintAll extends BaseCommand {
             System.out.print(t.getId());
             System.out.print(" name:");
             System.out.print(t.getName());
-            System.out.print(" descripition:");
+            System.out.print(" description:");
             System.out.print(t.getDescription());
             System.out.println(";;; ");
         }

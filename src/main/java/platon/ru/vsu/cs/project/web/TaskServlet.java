@@ -4,9 +4,7 @@ import platon.ru.vsu.cs.bweb_lib.annotations.PathParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.WebMethod;
 import platon.ru.vsu.cs.bweb_lib.server.HTTPException;
 import platon.ru.vsu.cs.bweb_lib.server.method.HTTPType;
-import platon.ru.vsu.cs.project.database.models.Group;
 import platon.ru.vsu.cs.project.database.models.Task;
-import platon.ru.vsu.cs.project.database.repostiories.GroupRepository;
 import platon.ru.vsu.cs.project.database.repostiories.TaskRepository;
 
 import javax.servlet.http.HttpServletRequest;

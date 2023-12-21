@@ -5,11 +5,8 @@ import platon.ru.vsu.cs.bweb_lib.annotations.QueryParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.WebMethod;
 import platon.ru.vsu.cs.bweb_lib.server.HTTPException;
 import platon.ru.vsu.cs.bweb_lib.server.method.HTTPType;
-import platon.ru.vsu.cs.project.database.models.Group;
 import platon.ru.vsu.cs.project.database.models.Mark;
-import platon.ru.vsu.cs.project.database.repostiories.GroupRepository;
 import platon.ru.vsu.cs.project.database.repostiories.MarkRepository;
-import platon.ru.vsu.cs.project.database.repostiories.StudentRepository;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,7 +39,7 @@ public class MarkServlet extends CRUDServlet<Mark> {
     @WebMethod(type = HTTPType.GET, path = path)
     public void getByStudentId(HttpServletRequest request,
                                HttpServletResponse response,
-                               @QueryParam(name = "student_id") Integer student_id) throws IOException, HTTPException {
+                               @QueryParam(name = "student_id") Integer student_id) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
 
@@ -57,7 +54,7 @@ public class MarkServlet extends CRUDServlet<Mark> {
     public void setMark(HttpServletRequest request, HttpServletResponse response,
                         @QueryParam(name = "student_id") Integer student_id,
                         @QueryParam(name = "task_id") Integer task_id,
-                        @QueryParam(name = "done") Boolean done) throws IOException, HTTPException {
+                        @QueryParam(name = "done") Boolean done) throws HTTPException {
 
         MarkRepository markRepository = (MarkRepository) repo;
         try {

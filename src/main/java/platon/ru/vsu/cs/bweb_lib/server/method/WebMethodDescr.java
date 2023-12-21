@@ -2,7 +2,6 @@ package platon.ru.vsu.cs.bweb_lib.server.method;
 
 import platon.ru.vsu.cs.bweb_lib.annotations.PathParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.QueryParam;
-import platon.ru.vsu.cs.bweb_lib.server.path.ParseMethod;
 import platon.ru.vsu.cs.bweb_lib.server.path.PathParser;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +17,7 @@ public class WebMethodDescr {
 
     public final HTTPType httpType;
 
-    protected final ParamDescr[] paramDescrs;
+    protected final WebMethodArgument[] webMethodArguments;
 
     protected final Set<String> foundedQueryParams = new HashSet<>();
 
@@ -34,7 +33,7 @@ public class WebMethodDescr {
             throw new IllegalArgumentException();
         }
 
-        paramDescrs = new ParamDescr[parameters.length-2];
+        webMethodArguments = new WebMethodArgument[parameters.length-2];
 
         for (int i = 2; i < parameters.length; i++) {
             Parameter p = parameters[i];
@@ -44,12 +43,11 @@ public class WebMethodDescr {
                     throw new IllegalArgumentException();
                 }
 
-                paramDescrs[i-2] = new ParamDescr(
+                webMethodArguments[i-2] = new WebMethodArgument(
                         PathParser.getParseMethod(p.getType()),
                         p.getType(),
                         true,
-                        null,
-                        i-2
+                        null
                 );
                 foundPathParam = true;
 
@@ -60,12 +58,11 @@ public class WebMethodDescr {
                 if(foundedQueryParams.contains(name)){
                     throw new IllegalArgumentException();
                 }
-                paramDescrs[i-2] = new ParamDescr(
+                webMethodArguments[i-2] = new WebMethodArgument(
                         PathParser.getParseMethod(p.getType()),
                         p.getType(),
                         false,
-                        queryParam.name(),
-                        i-2
+                        queryParam.name()
                 );
 
                 foundedQueryParams.add(name);
@@ -90,12 +87,12 @@ public class WebMethodDescr {
         System.out.println(pathParamGot);
         System.out.println(queryParamsGot);
 
-        Object[] res = new Object[paramDescrs.length+2];
+        Object[] res = new Object[webMethodArguments.length+2];
         res[0] = req;
         res[1] = resp;
 
-        for (int i = 0; i < paramDescrs.length; i++) {
-            ParamDescr param = paramDescrs[i];
+        for (int i = 0; i < webMethodArguments.length; i++) {
+            WebMethodArgument param = webMethodArguments[i];
             if (param.pathParam) {
                 if(pathParamGot == null) {
                     throw new CantBuildParamsException();

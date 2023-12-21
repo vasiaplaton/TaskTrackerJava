@@ -15,6 +15,7 @@ public class RemoveMark extends BaseCommand {
         int studentId = scanner.nextInt();
         System.out.println("input task id");
         int taskId = scanner.nextInt();
+        repositoryLib.getMarkRepository().setMark(studentId, taskId, true);
        // logic.setMark(studentId, taskId, false);
     }
 

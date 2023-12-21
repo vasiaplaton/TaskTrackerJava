@@ -16,14 +16,14 @@ import java.util.Objects;
 public abstract class MemoryRepository<T>  implements Repository<T> {
     protected final List<T> base;
     protected final Class<T> clazz;
-    protected List<CascadeDelete> toCascadeDelete = new ArrayList<>();
+    protected final List<CascadeDelete> toCascadeDelete = new ArrayList<>();
     int lastId = 0;
 
     protected Field[] columns;
 
     protected final EntityWork<T> entityWork;
 
-    protected class CascadeDelete{
+    protected static class CascadeDelete{
         public final Class<?> repo;
         public final Field fk;
         public final Class<?> ent;

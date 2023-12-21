@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.*;
 
 public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
-    protected final List<T> base;
     protected final Class<T> clazz;
     protected final EntityWork<T> entityWork;
 
@@ -22,7 +21,6 @@ public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
     public SQLRepository(Class<T> clazz, SQLConnector connector) {
         this.connector = connector;
 
-        base = new ArrayList<>();
         this.clazz = clazz;
         entityWork = new EntityWork<>(clazz);
         if(!clazz.isAnnotationPresent(Entity.class)) {

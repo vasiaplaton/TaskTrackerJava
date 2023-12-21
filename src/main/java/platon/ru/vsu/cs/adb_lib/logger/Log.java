@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Log {
+    @SuppressWarnings("FieldCanBeLocal")
     private final int level = 3;
     private static final String LOG_FILE_PATH = "log.txt";
     private Log(){

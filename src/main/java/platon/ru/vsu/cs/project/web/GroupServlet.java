@@ -1,19 +1,15 @@
 package platon.ru.vsu.cs.project.web;
 
 import platon.ru.vsu.cs.bweb_lib.annotations.PathParam;
-import platon.ru.vsu.cs.bweb_lib.annotations.QueryParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.WebMethod;
 import platon.ru.vsu.cs.bweb_lib.server.HTTPException;
 import platon.ru.vsu.cs.bweb_lib.server.method.HTTPType;
 import platon.ru.vsu.cs.project.database.models.Group;
-import platon.ru.vsu.cs.project.database.models.Student;
 import platon.ru.vsu.cs.project.database.repostiories.GroupRepository;
-import platon.ru.vsu.cs.project.database.repostiories.StudentRepository;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class GroupServlet extends CRUDServlet<Group> {
     private static final String path = "group";

@@ -37,9 +37,9 @@ public class EntityWork<T> {
                 if(primaryKey != null) {
                     throw new IllegalArgumentException();
                 }
-                primaryKey = new ColumnField(field, column.columnName(), false, true, customParseMethod);
+                primaryKey = new ColumnField(field, column.columnName(), false, customParseMethod);
             } else {
-                fields.add(new ColumnField(field, column.columnName(), column.nullable(), false, customParseMethod));
+                fields.add(new ColumnField(field, column.columnName(), column.nullable(), customParseMethod));
             }
 
         }

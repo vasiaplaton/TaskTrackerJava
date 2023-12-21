@@ -4,10 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import platon.ru.vsu.cs.adb_lib.repository.Repository;
 import platon.ru.vsu.cs.bweb_lib.annotations.WebClass;
-import platon.ru.vsu.cs.bweb_lib.annotations.WebMethod;
 import platon.ru.vsu.cs.bweb_lib.server.HTTPException;
-import platon.ru.vsu.cs.bweb_lib.server.method.HTTPType;
-import platon.ru.vsu.cs.project.database.models.Student;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -56,7 +53,7 @@ public abstract class CRUDServlet<T> implements WebClass {
             repo.update(id, got);
         }
         catch (RuntimeException e){
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "error appending in db" + e.toString());
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "error appending in db" + e);
             return;
         }
         response.sendError(HttpServletResponse.SC_OK);
@@ -76,7 +73,7 @@ public abstract class CRUDServlet<T> implements WebClass {
             out.flush();
         }
         catch (RuntimeException e){
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "error appending in db" + e.toString());
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "error appending in db" + e);
             return;
         }
         response.sendError(HttpServletResponse.SC_OK);
@@ -87,7 +84,7 @@ public abstract class CRUDServlet<T> implements WebClass {
             repo.delete(id);
         }
         catch (RuntimeException e){
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "error removing from db" + e.toString());
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "error removing from db" + e);
         }
         response.sendError(HttpServletResponse.SC_OK);
     }

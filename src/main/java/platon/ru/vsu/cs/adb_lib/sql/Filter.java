@@ -1,15 +1,10 @@
 package platon.ru.vsu.cs.adb_lib.sql;
 
 public class Filter {
-    // TODO add query mechanizm
+    // TODO add query mechanism
     public final String columnName;
 
     public final String columnValue;
-
-    public Filter(String columnName, String columnValue) {
-        this.columnName = columnName;
-        this.columnValue = columnValue;
-    }
 
     public Filter(String columnName, Object columnValue){
         this.columnName = columnName;

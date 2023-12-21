@@ -2,7 +2,7 @@ package platon.ru.vsu.cs.bweb_lib.server.method;
 
 import platon.ru.vsu.cs.bweb_lib.server.path.ParseMethod;
 
-public class ParamDescr {
+public class WebMethodArgument {
     public final ParseMethod parseMethod;
 
     public final Class<?> clazz;
@@ -11,13 +11,10 @@ public class ParamDescr {
 
     public final String name;
 
-    public final int number;
-
-    public ParamDescr(ParseMethod parseMethod, Class<?> clazz, boolean pathParam, String name, int number) {
+    public WebMethodArgument(ParseMethod parseMethod, Class<?> clazz, boolean pathParam, String name) {
         this.parseMethod = parseMethod;
         this.clazz = clazz;
         this.pathParam = pathParam;
         this.name = name;
-        this.number = number;
     }
 }

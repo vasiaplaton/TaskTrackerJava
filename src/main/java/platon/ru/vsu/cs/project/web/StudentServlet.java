@@ -1,6 +1,5 @@
 package platon.ru.vsu.cs.project.web;
 
-import platon.ru.vsu.cs.adb_lib.repository.Repository;
 import platon.ru.vsu.cs.bweb_lib.annotations.PathParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.QueryParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.WebMethod;
@@ -34,7 +33,7 @@ public class StudentServlet extends CRUDServlet<Student> {
 
     @WebMethod(type = HTTPType.GET, path = path)
     public void getByGroup(HttpServletRequest request, HttpServletResponse response,
-                           @QueryParam(name="group_id") Integer groupId) throws IOException, HTTPException {
+                           @QueryParam(name="group_id") Integer groupId) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
 

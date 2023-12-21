@@ -21,12 +21,11 @@ import platon.ru.vsu.cs.project.database.sql.repostiories.MarkSQLRepo;
 import platon.ru.vsu.cs.project.database.sql.repostiories.StudentSQLRepo;
 import platon.ru.vsu.cs.project.database.sql.repostiories.TaskSQLRepo;
 
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         RepositoryLib repositoryLib = new SQLRepositoryLib();
        // databaseSQL.dropAll();
       //  databaseSQL.createTables();

@@ -1,7 +1,5 @@
 package platon.ru.vsu.cs.bweb_lib.server.path;
 
-import platon.ru.vsu.cs.bweb_lib.server.method.WebMethodDescr;
-
 import java.util.HashMap;
 import java.util.Map;
 

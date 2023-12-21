@@ -16,7 +16,7 @@ public class AddMark extends BaseCommand {
         int studentId = scanner.nextInt();
         System.out.println("input task id");
         int taskId = scanner.nextInt();
-        //logic.setMark(studentId, taskId, true);
+        repositoryLib.getMarkRepository().setMark(studentId, taskId, true);
     }
 
     @Override

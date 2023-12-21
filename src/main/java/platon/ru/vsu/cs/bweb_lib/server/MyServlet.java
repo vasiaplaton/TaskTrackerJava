@@ -5,7 +5,6 @@ import platon.ru.vsu.cs.bweb_lib.server.method.HTTPType;
 import platon.ru.vsu.cs.bweb_lib.server.method.WebMethodDescr;
 import platon.ru.vsu.cs.bweb_lib.server.path.PathParser;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -68,17 +67,17 @@ public class MyServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         invokeMethod(HTTPType.POST, req, resp);
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         invokeMethod(HTTPType.PUT, req, resp);
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         invokeMethod(HTTPType.DELETE, req, resp);
     }
 }
