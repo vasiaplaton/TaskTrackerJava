@@ -1,12 +1,13 @@
 package platon.ru.vsu.cs.project.web;
 
-import platon.ru.vsu.cs.adb_lib.repository.Repository;
 import platon.ru.vsu.cs.bweb_lib.annotations.PathParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.QueryParam;
 import platon.ru.vsu.cs.bweb_lib.annotations.WebMethod;
 import platon.ru.vsu.cs.bweb_lib.server.HTTPException;
 import platon.ru.vsu.cs.bweb_lib.server.method.HTTPType;
+import platon.ru.vsu.cs.project.database.models.Group;
 import platon.ru.vsu.cs.project.database.models.Student;
+import platon.ru.vsu.cs.project.database.repostiories.GroupRepository;
 import platon.ru.vsu.cs.project.database.repostiories.StudentRepository;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,10 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class StudentServlet extends CRUDServlet<Student> {
-    private static final String path = "student";
-    protected StudentServlet(StudentRepository repo) {
-        super(repo, Student.class);
+public class GroupServlet extends CRUDServlet<Group> {
+    private static final String path = "group";
+    protected GroupServlet(GroupRepository repo) {
+        super(repo, Group.class);
     }
 
     @WebMethod(type = HTTPType.GET, path = path)
@@ -30,18 +31,6 @@ public class StudentServlet extends CRUDServlet<Student> {
     @Override
     public void getById(HttpServletRequest request, HttpServletResponse response, @PathParam Integer id) throws IOException, HTTPException {
         super.getById(request, response, id);
-    }
-
-    @WebMethod(type = HTTPType.GET, path = path)
-    public void getByGroup(HttpServletRequest request, HttpServletResponse response,
-                           @QueryParam(name="group_id") Integer groupId) throws IOException, HTTPException {
-        response.setContentType("application/json");
-        PrintWriter out = response.getWriter();
-
-        StudentRepository studentRepository = (StudentRepository) repo;
-
-        objectWriter.writeValue(out, studentRepository.getStudentsByGroup(groupId));
-        out.flush();
     }
 
     @WebMethod(type = HTTPType.PUT, path = path)

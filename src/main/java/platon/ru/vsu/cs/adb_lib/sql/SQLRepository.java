@@ -124,7 +124,7 @@ public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
         try {
             ColumnField pk = entityWork.getPrimaryKey();
             pk.field.setAccessible(true);
-            int id = (int) pk.field.get(object);
+            Integer id = (Integer) pk.field.get(object);
             String[] columnValues = getColumnValues(object);
             query = queryBuilder.insert(id, columnValues);
 
@@ -171,6 +171,10 @@ public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
     @Override
     public void update(int id, T newer) {
         try {
+            if(entityWork.getPrimaryKey().field.get(newer) != null){
+                throw new IllegalArgumentException();
+            }
+
             String query = queryBuilder.update(getColumnValues(newer), id);
             PreparedStatement p = connector.makeUpdate(query);
             int affectedRows = p.getUpdateCount();

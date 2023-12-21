@@ -97,7 +97,9 @@ public class QueryBuilder {
             String column = columnNames[i];
             queryString.append(column);
             queryString.append(" = ");
+            queryString.append("'");
             queryString.append(newerColumnValues[i]);
+            queryString.append("'");
 
             if (i != columnNames.length - 1) {
                 queryString.append(", ");

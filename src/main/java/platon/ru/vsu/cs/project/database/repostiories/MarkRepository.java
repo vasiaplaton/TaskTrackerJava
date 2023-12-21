@@ -1,7 +1,6 @@
 package platon.ru.vsu.cs.project.database.repostiories;
 
 import platon.ru.vsu.cs.adb_lib.repository.Repository;
-import platon.ru.vsu.cs.database.models.*;
 import platon.ru.vsu.cs.adb_lib.sql.Filter;
 import platon.ru.vsu.cs.project.database.models.Mark;
 

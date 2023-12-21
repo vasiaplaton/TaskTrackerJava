@@ -2,7 +2,6 @@ package platon.ru.vsu.cs.project.database.sql.repostiories;
 
 import platon.ru.vsu.cs.adb_lib.sql.SQLRepository;
 import platon.ru.vsu.cs.adb_lib.sql.conns.PostgreSQLConn;
-import platon.ru.vsu.cs.database.models.*;
 import platon.ru.vsu.cs.project.database.models.Mark;
 import platon.ru.vsu.cs.project.database.repostiories.MarkRepository;
 

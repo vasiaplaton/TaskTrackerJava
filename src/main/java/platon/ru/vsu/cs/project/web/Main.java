@@ -1,38 +1,24 @@
 package platon.ru.vsu.cs.project.web;
 
+import platon.ru.vsu.cs.bweb_lib.annotations.WebClass;
+import platon.ru.vsu.cs.bweb_lib.server.Server;
+import platon.ru.vsu.cs.project.database.RepositoryLib;
+import platon.ru.vsu.cs.project.database.sql.SQLRepositoryLib;
 
-import org.apache.catalina.Context;
-import org.apache.catalina.WebResourceRoot;
-import org.apache.catalina.startup.ContextConfig;
-import org.apache.catalina.startup.Tomcat;
-import org.apache.catalina.webresources.StandardRoot;
-
-import java.io.File;
-import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        Tomcat tomcat = new Tomcat();
-        tomcat.setPort(8080);
+    public static void main(String[] args) {
+        RepositoryLib repositoryLib = new SQLRepositoryLib();
 
-        Context context = tomcat.addContext("", new File(".").getAbsolutePath());
+        List<WebClass> webClasses = new ArrayList<>();
+        webClasses.add(new StudentServlet(repositoryLib.getStudentRepository()));
+        webClasses.add(new GroupServlet(repositoryLib.getGroupRepository()));
+        webClasses.add(new MarkServlet(repositoryLib.getMarkRepository()));
+        webClasses.add(new TaskServlet(repositoryLib.getTaskRepository()));
 
-        // Add the standard ContextConfig, which scans for annotations
-        // from here https://stackoverflow.com/questions/67253024/tomcat-catalina-context-add-existing-servlet-to-context
-        context.addLifecycleListener(new ContextConfig());
-        // Add the JAR/folder containing this class to PreResources
-        final WebResourceRoot root = new StandardRoot(context);
-        final URL url = findClassLocation(Main.class);
-        root.createWebResourceSet(WebResourceRoot.ResourceSetType.PRE, "/WEB-INF/classes", url, "/");
-        context.setResources(root);
-        // Run Tomcat
-        tomcat.getConnector();
-        tomcat.start();
-        tomcat.getServer().await();
+        Server server = new Server(webClasses);
+        server.runServer();
     }
-
-    private static URL findClassLocation(Class< ? > clazz) {
-        return clazz.getProtectionDomain().getCodeSource().getLocation();
-    }
-
 }
