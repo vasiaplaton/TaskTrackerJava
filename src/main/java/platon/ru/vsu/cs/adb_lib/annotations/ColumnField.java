@@ -11,11 +11,14 @@ public class ColumnField {
 
     public final String customParseMethod;
 
-    public ColumnField(Field field, String columnName, boolean nullable, String customParseMethod) {
+    public final String customToStringMethod;
+
+    public ColumnField(Field field, String columnName, boolean nullable, String customParseMethod, String customToStringMethod) {
         this.field = field;
         this.columnName = columnName;
         this.nullable = nullable;
         this.customParseMethod = customParseMethod;
+        this.customToStringMethod = customToStringMethod;
     }
 
 

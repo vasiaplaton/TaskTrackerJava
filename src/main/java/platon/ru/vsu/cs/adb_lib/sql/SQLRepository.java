@@ -105,13 +105,18 @@ public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
         return got.get(0);
     }
 
-    protected String[] getColumnValues(T object) throws IllegalAccessException {
+    protected String[] getColumnValues(T object) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         String[] columnValues = new String[entityWork.getFields().length];
         ColumnField[] fields = entityWork.getFields();
         for (int i = 0; i < fields.length; i++) {
             ColumnField cf = fields[i];
             cf.field.setAccessible(true);
-            columnValues[i] = cf.field.get(object).toString();
+            if(!Objects.equals(cf.customToStringMethod, "")){
+                columnValues[i] = (String) entityWork.getClazz().getDeclaredMethod(cf.customToStringMethod, Object.class).
+                        invoke(null, cf.field.get(object));
+            } else {
+                columnValues[i] = cf.field.get(object).toString();
+            }
         }
         return columnValues;
     }
@@ -125,6 +130,7 @@ public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
             Integer id = (Integer) pk.field.get(object);
             String[] columnValues = getColumnValues(object);
             query = queryBuilder.insert(id, columnValues);
+            System.out.println(query);
 
 
             PreparedStatement p = connector.makeUpdate(query);
@@ -146,6 +152,8 @@ public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
 
         } catch (IllegalAccessException | SQLException e) {
             Log.getI().log(e.toString(), 0);
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }
@@ -183,6 +191,8 @@ public abstract class SQLRepository<T> implements SQLRepositoryI<T> {
 
         } catch (SQLException | IllegalAccessException e) {
             Log.getI().log(e.toString(), 0);
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }

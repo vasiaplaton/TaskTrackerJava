@@ -81,9 +81,11 @@ public class WebMethodDescr {
     public static class CantBuildParamsException extends Exception{
     }
 
-    public Object[] buildParams(HttpServletRequest req, HttpServletResponse resp, String path) throws CantBuildParamsException, PathParser.IllegalPath {
+    public Object[] buildParams(HttpServletRequest req, HttpServletResponse resp, String path,
+                                Map<String, String[]> parameterMap) throws CantBuildParamsException, PathParser.IllegalPath {
+
         String pathParamGot = PathParser.getPathParam(path);
-        Map<String, String> queryParamsGot = PathParser.getQueryParams(path);
+        Map<String, String> queryParamsGot = PathParser.getQueryParams(parameterMap);
         System.out.println(pathParamGot);
         System.out.println(queryParamsGot);
 

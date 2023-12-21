@@ -16,7 +16,7 @@ public class Mark {
     protected Integer id;
 
     @NonNull
-    @Column(columnName = "isDone", nullable = false, methodCustomParse = "parse")
+    @Column(columnName = "isDone", nullable = false, methodCustomParse = "parse", methodCustomToString = "cast")
     protected Boolean isDone;
 
     @NonNull
@@ -32,6 +32,16 @@ public class Mark {
 
     public static Boolean parse(Object i){
         return (Integer) i == 1;
+    }
+
+    public static String cast(Object i){
+        Boolean b = (Boolean) i;
+        if(b){
+            return "1";
+        }
+        else {
+            return "0";
+        }
     }
 
 }

@@ -50,7 +50,7 @@ public class MarkServlet extends CRUDServlet<Mark> {
     }
 
 
-    @WebMethod(type = HTTPType.PUT, path = "setMark/")
+    @WebMethod(type = HTTPType.PUT, path = "setmark/")
     public void setMark(HttpServletRequest request, HttpServletResponse response,
                         @QueryParam(name = "student_id") Integer student_id,
                         @QueryParam(name = "task_id") Integer task_id,

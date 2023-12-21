@@ -12,4 +12,6 @@ public @interface Column {
     boolean nullable();
 
     String methodCustomParse() default "";
+
+    String methodCustomToString() default "";
 }

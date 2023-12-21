@@ -30,7 +30,7 @@ public class MyServlet extends HttpServlet {
 
                 Object[] params;
                 try {
-                    params = method.buildParams(req, resp, req.getPathInfo());
+                    params = method.buildParams(req, resp, req.getPathInfo(), req.getParameterMap());
                 } catch (WebMethodDescr.CantBuildParamsException e){
                     continue;
                 } catch (PathParser.IllegalPath e){

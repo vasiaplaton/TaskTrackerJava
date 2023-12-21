@@ -1,1 +1,45 @@
-[2023-12-21 03:51:33] url: jdbc:postgresql://localhost:5432/tasks?user=admin&password=admin
+[2023-12-21 04:34:24] url: jdbc:postgresql://localhost:5432/tasks?user=admin&password=admin
+[2023-12-21 04:34:27] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22 AND taskId = 1
+[2023-12-21 04:34:27] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22 AND taskId = 1
+[2023-12-21 04:34:27] INSERT INTO Marks (isDone, studentId, taskId ) VALUES ('1', '22', '1' );
+[2023-12-21 04:34:39] SELECT id, firstName, lastName, groupId FROM Students WHERE id = 22
+[2023-12-21 04:34:39] SELECT id, firstName, lastName, groupId FROM Students WHERE id = 22
+[2023-12-21 04:34:39] Got Eve for class: platon.ru.vsu.cs.project.database.models.Student
+[2023-12-21 04:34:39] Got Johnson for class: platon.ru.vsu.cs.project.database.models.Student
+[2023-12-21 04:34:39] Got 2 for class: platon.ru.vsu.cs.project.database.models.Student
+[2023-12-21 04:34:39] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22
+[2023-12-21 04:34:39] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22
+[2023-12-21 04:34:39] Got 1 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:39] Got 22 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:39] Got 2 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:39] Got 1 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:39] Got 22 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:39] Got 1 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:39] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-21 04:34:39] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-21 04:34:39] Got TWO for class: platon.ru.vsu.cs.project.database.models.Task
+[2023-12-21 04:34:39] Got Great description for class: platon.ru.vsu.cs.project.database.models.Task
+[2023-12-21 04:34:39] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-21 04:34:39] SELECT id, name, description FROM Tasks WHERE id = 1
+[2023-12-21 04:34:39] Got ONE for class: platon.ru.vsu.cs.project.database.models.Task
+[2023-12-21 04:34:39] Got Great description for class: platon.ru.vsu.cs.project.database.models.Task
+[2023-12-21 04:34:47] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22 AND taskId = 1
+[2023-12-21 04:34:47] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22 AND taskId = 1
+[2023-12-21 04:34:47] Got 1 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:47] Got 22 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:47] Got 1 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:47] DELETE FROM Marks where id = 36
+[2023-12-21 04:34:50] SELECT id, firstName, lastName, groupId FROM Students WHERE id = 22
+[2023-12-21 04:34:50] SELECT id, firstName, lastName, groupId FROM Students WHERE id = 22
+[2023-12-21 04:34:50] Got Eve for class: platon.ru.vsu.cs.project.database.models.Student
+[2023-12-21 04:34:50] Got Johnson for class: platon.ru.vsu.cs.project.database.models.Student
+[2023-12-21 04:34:50] Got 2 for class: platon.ru.vsu.cs.project.database.models.Student
+[2023-12-21 04:34:50] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22
+[2023-12-21 04:34:50] SELECT id, isDone, studentId, taskId FROM Marks WHERE studentId = 22
+[2023-12-21 04:34:50] Got 1 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:50] Got 22 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:50] Got 2 for class: platon.ru.vsu.cs.project.database.models.Mark
+[2023-12-21 04:34:50] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-21 04:34:50] SELECT id, name, description FROM Tasks WHERE id = 2
+[2023-12-21 04:34:50] Got TWO for class: platon.ru.vsu.cs.project.database.models.Task
+[2023-12-21 04:34:50] Got Great description for class: platon.ru.vsu.cs.project.database.models.Task

@@ -33,13 +33,14 @@ public class EntityWork<T> {
             if (!field.isAnnotationPresent(Column.class)) continue;
             Column column = field.getAnnotation(Column.class);
             String customParseMethod = column.methodCustomParse();
+            String customToStringMethod = column.methodCustomToString();
             if(field.isAnnotationPresent(PrimaryKey.class)) {
                 if(primaryKey != null) {
                     throw new IllegalArgumentException();
                 }
-                primaryKey = new ColumnField(field, column.columnName(), false, customParseMethod);
+                primaryKey = new ColumnField(field, column.columnName(), false, customParseMethod, customToStringMethod);
             } else {
-                fields.add(new ColumnField(field, column.columnName(), column.nullable(), customParseMethod));
+                fields.add(new ColumnField(field, column.columnName(), column.nullable(), customParseMethod, customToStringMethod));
             }
 
         }

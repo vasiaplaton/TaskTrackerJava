@@ -4,6 +4,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PathParser {
+    public static Map<String, String>  getQueryParams(Map<String, String[]> parameterMap) throws IllegalPath {
+        Map<String, String> map = new HashMap<>();
+        for (String key: parameterMap.keySet()) {
+            String[] values = parameterMap.get(key);
+            if(values.length != 1){
+                throw new IllegalPath("found another param same name");
+            }
+            map.put(key, values[0]);
+        }
+        return map;
+    }
     public static String getPathParam(String path){
         if(path == null) {
             return null;

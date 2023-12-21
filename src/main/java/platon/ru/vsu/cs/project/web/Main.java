@@ -13,7 +13,7 @@ public class Main {
         RepositoryLib repositoryLib = new SQLRepositoryLib();
 
         List<WebClass> webClasses = new ArrayList<>();
-        webClasses.add(new StudentServlet(repositoryLib.getStudentRepository()));
+        webClasses.add(new StudentServlet(repositoryLib.getStudentRepository(), repositoryLib));
         webClasses.add(new GroupServlet(repositoryLib.getGroupRepository()));
         webClasses.add(new MarkServlet(repositoryLib.getMarkRepository()));
         webClasses.add(new TaskServlet(repositoryLib.getTaskRepository()));
